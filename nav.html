@@ -1,0 +1,186 @@
+<style>
+    #hamburger {
+        display: none;
+        /* hidden by default */
+        flex-direction: column;
+        gap: 6px;
+        padding: 8px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+
+    #hamburger span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: #1e293b;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    #hamburger.open span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.open span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    /* Show hamburger only on mobile */
+    @media (max-width: 767px) {
+        #hamburger {
+            display: flex;
+        }
+
+        #desktopLinks {
+            display: none !important;
+        }
+
+        #desktopContact {
+            display: none !important;
+        }
+    }
+
+    #mobileMenu {
+        display: none;
+        width: 100%;
+        max-width: 80rem;
+        margin-top: 8px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.97);
+        border: 1px solid rgba(209, 213, 219, 0.4);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        padding: 12px 16px;
+        box-sizing: border-box;
+    }
+
+    #mobileMenu.open {
+        display: block;
+    }
+
+    #mobileMenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #mobileMenu ul li a {
+        display: block;
+        padding: 12px 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #475569;
+        text-decoration: none;
+        border-bottom: 1px solid #f1f5f9;
+    }
+
+    #mobileMenu ul li:last-child a {
+        border-bottom: none;
+    }
+
+    #mobileMenu ul li a:hover {
+        color: #1e293b;
+    }
+
+    #mobileContact {
+        display: block;
+        margin-top: 12px;
+        text-align: center;
+        background: linear-gradient(to right, #1e293b, #334155);
+        color: white;
+        padding: 10px 24px;
+        border-radius: 9999px;
+        font-size: 14px;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .nav-link {
+        position: relative;
+    }
+
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -4px;
+        left: 0;
+        background: linear-gradient(90deg, #2d3748, #4a5568);
+        transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+        width: 100%;
+    }
+</style>
+
+<header class="fixed top-0 left-0 right-0 z-50 flex flex-col items-center pt-3 px-4 md:px-16">
+
+    <nav
+        class="rounded-full bg-white/90 backdrop-blur-xl border-[0.5px] border-gray-200/40 shadow-lg flex items-center justify-between w-full max-w-7xl px-6 py-3">
+        <a class="flex items-center gap-3" href="index.html">
+            <img alt="Logo" class="h-10 w-10 rounded-full border border-gray-200" src="images/logo-chrisentia.jpeg" />
+            <span class="text-xl font-black tracking-tight text-slate-800">Chrisentia Consultancy</span>
+        </a>
+
+        <ul id="desktopLinks" class="flex items-center gap-8">
+            <li><a class="nav-link text-sm font-semibold text-slate-600 hover:text-slate-800" href="index.html">Home</a>
+            </li>
+            <li><a class="nav-link text-sm font-semibold text-slate-600 hover:text-slate-800"
+                    href="services.html">Services</a></li>
+            <li><a class="nav-link text-sm font-semibold text-slate-600 hover:text-slate-800"
+                    href="solutions.html">Solutions</a></li>
+        </ul>
+
+        <div class="flex items-center gap-3">
+            <a id="desktopContact" href="#contact"
+                class="bg-gradient-to-r from-slate-800 to-slate-700 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-slate-800/30 hover:scale-105 transition-all">
+                Contact Us
+            </a>
+            <button id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobileMenu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="solutions.html">Solutions</a></li>
+        </ul>
+        <a id="mobileContact" href="#contact">Contact Us</a>
+    </div>
+
+</header>
+
+<!-- Place this just before </body> -->
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var hamburger = document.getElementById('hamburger');
+        var mobileMenu = document.getElementById('mobileMenu');
+
+        if (!hamburger) { console.error('hamburger not found'); return; }
+        if (!mobileMenu) { console.error('mobileMenu not found'); return; }
+
+        hamburger.addEventListener('click', function () {
+            console.log('hamburger clicked'); // confirm it fires
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+        });
+
+        document.querySelectorAll('#mobileMenu a').forEach(function (link) {
+            link.addEventListener('click', function () {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            });
+        });
+    });
+</script> -->

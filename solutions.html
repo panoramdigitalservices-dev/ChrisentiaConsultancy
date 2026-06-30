@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chrisentia Consultancy | Solutions</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-chrisentia.jpeg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;900&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8f0f7",
+                        "primary-container": "#d4e6f1",
+                        "on-surface": "#2d3748",
+                        "on-surface-variant": "#718096",
+                        "surface-dim": "#f0f4f8",
+                        "background": "#fafbfc",
+                    },
+                    fontFamily: {
+                        "h1": ["Hanken Grotesk"],
+                        "h2": ["Hanken Grotesk"],
+                        "h3": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fafbfc 0%, #f0f4f8 50%, #e8f0f7 100%);
+            min-height: 100vh;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .project-card {
+            background: linear-gradient(145deg, #fafbfc, #f5f8fb);
+            border: 1px solid rgba(45, 55, 72, 0.08);
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px -10px rgba(45, 55, 72, 0.15);
+            border-color: rgba(45, 55, 72, 0.2);
+        }
+
+        .project-number {
+            font-size: 5rem;
+            line-height: 1;
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 2px #2d3748;
+            opacity: 0.1;
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .project-card:hover .project-number {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body data-page="solutions.html"
+    class="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-on-surface font-body-lg overflow-x-hidden">
+    <!-- Navigation Component -->
+    <div id="navbar"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="min-h-[70vh] flex flex-col justify-center px-4 md:px-16 pt-32 pb-16 relative reveal">
+            <div class="absolute inset-0 z-0">
+                <img src="images/hero-solutions.png" class="w-full h-full object-cover"
+                    alt="Smart Automation Solutions" />
+                <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-[#fff8f6]"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto w-full relative z-10 text-center text-white mt-20">
+                <span class="material-symbols-outlined text-6xl text-slate-800 mb-6 drop-shadow-lg">hub</span>
+                <h1 class="font-h1 text-4xl sm:text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">
+                    SOLUTIONS & PROJECTS
+                </h1>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto mb-10 drop-shadow-md">
+                    Tailored automation solutions powering Sri Lanka's industries. We turn complex challenges into
+                    seamless operational successes.
+                </p>
+                <!-- <a href="#projects"
+                    class="bg-slate-800 text-white px-10 py-4 rounded-full font-bold hover:bg-white hover:text-slate-800 transition-all shadow-xl shadow-slate-800/30">View
+                    Our Projects</a> -->
+            </div>
+        </section>
+
+        <!-- Our Projects Section -->
+        <section id="projects" class="py-24 px-4 md:px-16 relative z-20 -mt-10 reveal">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                    <!-- Project 1 -->
+                    <div class="project-card p-6 md:p-10 rounded-3xl relative overflow-hidden group">
+                        <div class="project-number">01</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-4 pr-16 relative z-10">PET Bottle Feeding Machine</h3>
+                        <p class="text-on-surface-variant text-lg mb-6 relative z-10">
+                            Ensure smooth, continuous bottle supply to the filling line while reducing manual handling
+                            and increasing overall throughput.
+                        </p>
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="images/hero-automation.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="PET Bottle Machine" />
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card p-6 md:p-10 rounded-3xl relative overflow-hidden group">
+                        <div class="project-number">02</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-4 pr-16 relative z-10">AI Powered Coconut Counter</h3>
+                        <p class="text-on-surface-variant text-lg mb-6 relative z-10">
+                            Automatically detect and count coconuts in real time, improving accuracy and efficiency in
+                            agricultural processing operations.
+                        </p>
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="images/service-cfd.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="AI Vision System" />
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card p-6 md:p-10 rounded-3xl relative overflow-hidden group">
+                        <div class="project-number">03</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-4 pr-16 relative z-10">Smart Shelf for Supermarkets
+                        </h3>
+                        <p class="text-on-surface-variant text-lg mb-6 relative z-10">
+                            Custom SCADA setups enhancing operational efficiency and inventory management on the retail
+                            floor.
+                        </p>
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="images/structural-design.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Smart Shelf" />
+                        </div>
+                        <a href="#"
+                            class="text-slate-800 font-bold hover:underline relative z-10 flex items-center gap-1">Learn
+                            More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card p-6 md:p-10 rounded-3xl relative overflow-hidden group">
+                        <div class="project-number">04</div>
+                        <h3 class="font-h3 text-2xl font-bold mb-4 pr-16 relative z-10">3D Modelling of Harumi (Pvt.)
+                            Ltd.</h3>
+                        <p class="text-on-surface-variant text-lg mb-6 relative z-10">
+                            Precision-crafted panels and 3D architectural/mechanical layouts for seamless facility
+                            automation.
+                        </p>
+                        <div class="w-full h-48 rounded-2xl overflow-hidden mb-6">
+                            <img src="images/service-cad.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="3D Modelling" />
+                        </div>
+                        <a href="#"
+                            class="text-slate-800 font-bold hover:underline relative z-10 flex items-center gap-1">Learn
+                            More <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Expertise Split Section -->
+        <section class="py-24 px-4 md:px-16 bg-white reveal">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
+                <!-- About Chrisentia -->
+                <div
+                    class="bg-surface-dim/30 p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] border border-gray-100 shadow-sm relative overflow-hidden">
+                    <div class="absolute -top-10 -right-10 text-slate-800 opacity-5">
+                        <span class="material-symbols-outlined text-[15rem]">corporate_fare</span>
+                    </div>
+                    <h2 class="font-h2 text-4xl font-bold mb-6 relative z-10">About Chrisentia</h2>
+                    <p class="text-on-surface-variant text-lg mb-8 leading-relaxed relative z-10">
+                        We bring smart automation solutions to Sri Lanka's industries, blending advanced technology with
+                        practical, robust design.
+                    </p>
+                    <a href="index.html#contact"
+                        class="inline-flex items-center gap-2 bg-white text-on-surface px-6 py-3 rounded-full font-bold shadow-sm hover:shadow-md transition-shadow relative z-10 border border-gray-300">
+                        Learn more
+                    </a>
+                </div>
+
+                <!-- Our Expertise -->
+                <div
+                    class="bg-primary p-8 md:p-12 rounded-[2rem] md:rounded-[3rem] shadow-xl text-black relative overflow-hidden">
+                    <div class="absolute -bottom-10 -right-10 text-black opacity-10">
+                        <span class="material-symbols-outlined text-[15rem]">psychology</span>
+                    </div>
+                    <h2 class="font-h2 text-4xl font-bold mb-6 relative z-10">Our Expertise</h2>
+                    <p class="text-black/90 text-lg mb-8 leading-relaxed relative z-10">
+                        From SCADA to AI, we design and deliver tailored automation systems that keep industries running
+                        smoothly, efficiently, and profitably.
+                    </p>
+                    <a href="services.html"
+                        class="inline-flex items-center gap-2 bg-white text-slate-800 px-6 py-3 rounded-full font-bold shadow-sm hover:scale-105 transition-transform relative z-10">
+                        View our services
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script>
+        // Load Navigation Component
+        // fetch('nav.html')
+        //     .then(response => response.text())
+        //     .then(html => {
+        //         document.getElementById('navbar').innerHTML = html;
+        //     })
+        //     .catch(err => console.error('Error loading navbar:', err));
+
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+
+                // ✅ Nav is now in DOM — safe to wire up hamburger
+                var hamburger = document.getElementById('hamburger');
+                var mobileMenu = document.getElementById('mobileMenu');
+
+                hamburger.addEventListener('click', function () {
+                    hamburger.classList.toggle('open');
+                    mobileMenu.classList.toggle('open');
+                });
+
+                document.querySelectorAll('#mobileMenu a').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        hamburger.classList.remove('open');
+                        mobileMenu.classList.remove('open');
+                    });
+                });
+
+                // Active link highlight
+                var filename = window.location.pathname.split('/').pop() || 'index.html';
+                document.querySelectorAll('#navLinks a, #navLinksMobile a').forEach(function (link) {
+                    var isActive = link.getAttribute('href') === filename;
+                    if (isActive) {
+                        link.classList.add('text-slate-800', 'font-black');
+                        link.classList.remove('text-slate-600');
+                    }
+                });
+            })
+            .catch(err => console.error('Error loading navbar:', err));
+
+        // Load Footer Component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(err => console.error('Error loading footer:', err));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+    </script>
+</body>
+
+</html>

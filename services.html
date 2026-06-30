@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Chrisentia Consultancy | Our Services</title>
+    <link rel="icon" type="image/jpeg" href="images/logo-chrisentia.jpeg" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;900&family=Inter:wght@400;500;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#e8f0f7",
+                        "primary-container": "#d4e6f1",
+                        "on-surface": "#2d3748",
+                        "on-surface-variant": "#718096",
+                        "surface-dim": "#f0f4f8",
+                        "background": "#fafbfc",
+                    },
+                    fontFamily: {
+                        "h1": ["Hanken Grotesk"],
+                        "h2": ["Hanken Grotesk"],
+                        "h3": ["Hanken Grotesk"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: linear-gradient(135deg, #fafbfc 0%, #f0f4f8 50%, #e8f0f7 100%);
+            min-height: 100vh;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .service-card {
+            transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .service-card:hover {
+            transform: scale(1.03) translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(45, 55, 72, 0.25);
+        }
+
+        .kinetic-rotate {
+            animation: slow-rotate 25s linear infinite;
+        }
+
+        @keyframes slow-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        section {
+            position: relative;
+        }
+
+        section.bg-white {
+            background: linear-gradient(180deg, #fafbfc 0%, #f5f8fb 100%);
+        }
+
+        section.bg-surface-dim {
+            background: linear-gradient(180deg, #f0f4f8 0%, #e8f0f7 100%);
+        }
+    </style>
+</head>
+
+<body data-page="services.html"
+    class="bg-gradient-to-br from-white via-gray-50 to-gray-100 text-on-surface font-body-lg overflow-x-hidden">
+    <!-- Navigation Component -->
+    <div id="navbar"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="pt-40 pb-20 px-4 md:px-16 relative overflow-hidden reveal">
+            <div class="max-w-7xl mx-auto text-center space-y-6">
+                <span class="text-slate-800 font-bold tracking-widest uppercase">OUR SERVICES</span>
+                <h1 class="font-h1 text-4xl sm:text-5xl md:text-7xl font-bold text-on-surface">Tailored automation
+                    solutions</h1>
+                <p class="text-xl text-on-surface-variant max-w-2xl mx-auto">
+                    Designed to boost your industrial efficiency and empower industry progress.
+                </p>
+
+                <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 text-left">
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-4xl text-slate-800 mb-4">bolt</span>
+                        <h3 class="font-h3 text-2xl font-bold mb-3">Electrical Supply</h3>
+                        <p class="text-on-surface-variant">Quality components to support your project needs and ensure
+                            reliable electrical infrastructure.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <span
+                            class="material-symbols-outlined text-4xl text-slate-800 mb-4">precision_manufacturing</span>
+                        <h3 class="font-h3 text-2xl font-bold mb-3">Automation Design</h3>
+                        <p class="text-on-surface-variant">Custom system designs for optimal industrial automation,
+                            perfectly matched to your workflow.</p>
+                    </div>
+                    <div
+                        class="bg-white p-8 rounded-3xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+                        <span class="material-symbols-outlined text-4xl text-slate-800 mb-4">hub</span>
+                        <h3 class="font-h3 text-2xl font-bold mb-3">IIoT Integration</h3>
+                        <p class="text-on-surface-variant">Seamless connection of devices for smarter operations,
+                            real-time data, and analytics.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empowering Industry Progress -->
+        <section
+            class="py-24 px-4 md:px-16 bg-gradient-to-b from-slate-800 via-slate-750 to-slate-900 text-white reveal">
+            <div class="max-w-7xl mx-auto">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <h2 class="font-h1 text-4xl md:text-5xl font-bold mb-6">Empowering Industry Progress</h2>
+                        <p class="text-lg text-white/80 mb-10 leading-relaxed">
+                            At Chrisentia Consultancy, we bring automation dreams to life through tailored SCADA, IIoT,
+                            and AI solutions in Sri Lanka. Our commitment to excellence ensures your industrial systems
+                            are modernized for the future.
+                        </p>
+
+                        <!-- <div class="grid grid-cols-2 gap-8">
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl text-white text-slate-800 mb-2">150+</div>
+                                <div class="font-bold text-white/90">Proven Results</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl text-white text-slate-800 mb-2">15</div>
+                                <div class="font-bold text-white/90">Trusted Experts</div>
+                            </div>
+                        </div> -->
+
+                        <div class="grid grid-cols-2 gap-8">
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl text-white mb-2">
+                                    <span data-target="150">0</span>+
+                                </div>
+                                <div class="font-bold text-white/90">Proven Results</div>
+                            </div>
+                            <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/10">
+                                <div class="text-4xl text-white mb-2">
+                                    <span data-target="15">0</span>
+                                </div>
+                                <div class="font-bold text-white/90">Trusted Experts</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div
+                        class="relative w-full aspect-square md:aspect-video lg:aspect-square rounded-[3rem] overflow-hidden shadow-2xl">
+                        <!-- <img src="images/hero-services.png"
+                            class="w-full h-full object-cover kinetic-rotate scale-125 origin-center"
+                            alt="Team of Experts" /> -->
+                        <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                            <source src="videos/hero-services.mp4" type="video/mp4" />
+                            <!-- Fallback if video fails -->
+                            <img src="images/hero-services.png"
+                                class="w-full h-full object-cover kinetic-rotate scale-125 origin-center"
+                                alt="Team of Experts" />
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-tr from-black/80 to-transparent"></div>
+                        <div class="absolute bottom-8 left-8 right-8">
+                            <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/20">
+                                <h3 class="text-xl font-bold mb-2">Engineering Excellence</h3>
+                                <p class="text-white/70 text-sm">Transforming industries with innovative automation.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation Excellence Section -->
+        <section class="py-24 px-4 md:px-16 bg-white reveal">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-h1 text-4xl md:text-5xl font-bold mb-4">Automation Excellence</h2>
+                    <p class="text-lg text-on-surface-variant">Tailored SCADA and PLC solutions for industry.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <!-- Service 1 -->
+                    <div
+                        class="service-card rounded-[2.5rem] overflow-hidden bg-background shadow-lg border border-gray-100 group flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/structural-design.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Digital Twins" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div class="absolute top-6 right-6 bg-primary text-white p-3 rounded-xl shadow-lg">
+                                <span class="material-symbols-outlined">dataset</span>
+                            </div>
+                            <h3 class="absolute bottom-6 left-6 right-6 text-white font-h3 text-3xl font-bold">1.
+                                Digital Twins</h3>
+                        </div>
+                        <div class="p-6 md:p-10 flex-grow">
+                            <p class="text-on-surface-variant text-lg leading-relaxed">
+                                Creating precise digital replicas of your facilities to optimize operations and foresee
+                                maintenance needs, helping you save time and costs through predictive analytics.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div
+                        class="service-card rounded-[2.5rem] overflow-hidden bg-background shadow-lg border border-gray-100 group flex flex-col">
+                        <div class="h-64 overflow-hidden relative">
+                            <img src="images/service-fea.png"
+                                class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                                alt="Panel Fabrication" />
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                            <div class="absolute top-6 right-6 bg-primary text-white p-3 rounded-xl shadow-lg">
+                                <span class="material-symbols-outlined">electrical_services</span>
+                            </div>
+                            <h3 class="absolute bottom-6 left-6 right-6 text-white font-h3 text-3xl font-bold">2. Panel
+                                Fabrication</h3>
+                        </div>
+                        <div class="p-6 md:p-10 flex-grow">
+                            <p class="text-on-surface-variant text-lg leading-relaxed">
+                                Designing and building custom electrical control panels with quality components to
+                                ensure reliable performance and seamless integration in your automation projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <script>
+        // Load Navigation Component
+        // fetch('nav.html')
+        //     .then(response => response.text())
+        //     .then(html => {
+        //         document.getElementById('navbar').innerHTML = html;
+        //     })
+        //     .catch(err => console.error('Error loading navbar:', err));
+
+        fetch('nav.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar').innerHTML = html;
+
+                // ✅ Nav is now in DOM — safe to wire up hamburger
+                var hamburger = document.getElementById('hamburger');
+                var mobileMenu = document.getElementById('mobileMenu');
+
+                hamburger.addEventListener('click', function () {
+                    hamburger.classList.toggle('open');
+                    mobileMenu.classList.toggle('open');
+                });
+
+                document.querySelectorAll('#mobileMenu a').forEach(function (link) {
+                    link.addEventListener('click', function () {
+                        hamburger.classList.remove('open');
+                        mobileMenu.classList.remove('open');
+                    });
+                });
+
+                // Active link highlight
+                var filename = window.location.pathname.split('/').pop() || 'index.html';
+                document.querySelectorAll('#navLinks a, #navLinksMobile a').forEach(function (link) {
+                    var isActive = link.getAttribute('href') === filename;
+                    if (isActive) {
+                        link.classList.add('text-slate-800', 'font-black');
+                        link.classList.remove('text-slate-600');
+                    }
+                });
+            })
+            .catch(err => console.error('Error loading navbar:', err));
+
+        // Load Footer Component
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('footer').innerHTML = html;
+            })
+            .catch(err => console.error('Error loading footer:', err));
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+        setTimeout(() => window.dispatchEvent(new Event('scroll')), 100);
+    </script>
+
+    <script>
+        function animateCounter(element, target, duration = 500) {
+            element.textContent = '0';
+            let current = 0;
+            const increment = target / (duration / 16);
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    element.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    element.textContent = Math.floor(current);
+                }
+            }, 16);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = parseInt(entry.target.getAttribute('data-target'));
+                    if (!isNaN(target)) {
+                        animateCounter(entry.target, target, 500);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('[data-target]').forEach(el => counterObserver.observe(el));
+    </script>
+</body>
+
+</html>
