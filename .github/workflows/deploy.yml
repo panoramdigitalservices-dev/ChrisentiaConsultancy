@@ -2,8 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: 
-    - main
+    branches:
+      - main
 
 permissions:
   contents: read
@@ -21,22 +21,17 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-    #Downloads your repo code onto that Linux machine.
       - name: Checkout
-        uses: actions/checkout@v4  
+        uses: actions/checkout@v4
 
-    #Prepares GitHub Pages settings for deployment
       - name: Setup Pages
-        uses: actions/configure-pages@v4 .
-        
-    #Packages your entire project folder (. = everything) ready to deploy.
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3 
+        uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-        
-        #Pushes the packaged files live to your GitHub Pages URL 
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-   
